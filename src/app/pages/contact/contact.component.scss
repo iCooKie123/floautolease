@@ -1,0 +1,41 @@
+.foreach-contact-section {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "icon title" "icon description";
+  align-items: center;
+}
+
+.icon-section {
+  grid-area: icon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1em;
+}
+
+.title-section {
+  grid-area: title;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.description-section {
+  grid-area: description;
+}
+
+.contact-section-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 767px) {
+  .icon-section {
+    margin-bottom: 1em;
+  }
+  .contact-section-container {
+    flex-direction: column;
+  }
+}

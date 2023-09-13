@@ -1,0 +1,90 @@
+<app-navbar></app-navbar>
+<body style="padding: 5rem">
+  <h1>Contact</h1>
+  <summary>
+    Bine ați venit la pagina noastră de contact! Ne bucurăm să vă ascultăm și să
+    vă răspundem la întrebări, sugestii sau orice altceva aveți în minte.
+    Comunicarea cu voi, clienții noștri, este esențială pentru noi. Așadar, nu
+    ezitați să ne contactați și să împărtășiți gândurile voastre. Suntem aici
+    pentru a vă ajuta în orice fel posibil.
+  </summary>
+
+  <main>
+    <address class="contact-section-container">
+      <section>
+        <section
+          *ngFor="let section of contactSections"
+          class="foreach-contact-section"
+        >
+          <mat-icon
+            fontIcon="{{ section.icon }}"
+            class="icon-section"
+          ></mat-icon>
+          <h2
+            [attr.aria-label]="section.title"
+            class="title-section"
+            role="heading"
+            aria-level="2"
+          >
+            {{ section.title }}
+          </h2>
+          <div class="description-section">
+            <p
+              role="paragraph"
+              *ngFor="let description of section.description"
+              class="paragraph-section"
+            >
+              <ng-container *ngIf="description.startsWith('mailto:')">
+                <a [href]="description" aria-label="email" role="email">{{
+                  description.replace("mailto:", "")
+                }}</a>
+              </ng-container>
+              <ng-container *ngIf="description.startsWith('tel:')">
+                <a
+                  [href]="description"
+                  aria-label="telephone"
+                  role="telephone"
+                  >{{ description.replace("tel:", "") }}</a
+                >
+              </ng-container>
+              <ng-container
+                *ngIf="
+                  !description.startsWith('mailto:') &&
+                  !description.startsWith('tel:')
+                "
+              >
+                <p role="paragraph" aria-label="description">
+                  {{ description }}
+                </p>
+              </ng-container>
+            </p>
+          </div>
+        </section>
+      </section>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2850.8523238533417!2d26.197151476422217!3d44.39515310412857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1fd04289b3405%3A0xc199aee22beb702a!2sFLO%20AUTO%20LEASE%20SRL!5e0!3m2!1sen!2sro!4v1694644231450!5m2!1sen!2sro"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </address>
+  </main>
+
+  <head>
+    <title>Contact Us - My Website</title>
+    <meta
+      name="description"
+      content="Contact us for any inquiries or feedback."
+    />
+    <meta name="keywords" content="contact, email, phone, feedback" />
+    <link rel="canonical" href="https://www.mywebsite.com/contact" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="My Website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+</body>
