@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 interface Link {
@@ -12,29 +12,33 @@ interface Link {
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  links: Link[] = [
+  navLinks: Link[] = [
     { name: 'ACASA', path: '' },
     { name: 'MASINI', path: 'masini' },
     { name: 'CONTACT', path: 'contact' },
   ];
-  activeLink = this.links[0];
+  navVisible = false;
+  @HostBinding('class.mobile') isMobile = false;
 
-  constructor(private router: Router) {}
+  toggleNav() {
+    this.navVisible = !this.navVisible;
+  }
 
+  constructor(private router: Router) {
+    this.isMobile = window.innerWidth < 768; // Set initial value based on window size
+  }
+
+  isActive(linkPath: string): boolean {
+    return this.router.url === '/' + linkPath;
+  }
   ngOnInit(): void {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        const url = event.urlAfterRedirects;
-        const link = this.links.find((l) => url.includes(l.path));
-        if (link) {
-          this.activeLink = link;
-        }
-      }
+    window.addEventListener('resize', () => {
+      this.isMobile = window.innerWidth < 768; // Update value on window resize
     });
   }
 
-  handleClick(link: Link) {
-    this.activeLink = link;
-    this.router.navigate([link.path]);
+  navigateTo(linkPath: string): void {
+    this.toggleNav();
+    this.router.navigate([linkPath]);
   }
 }

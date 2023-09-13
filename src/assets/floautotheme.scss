@@ -1,11 +1,6 @@
-@import '~@angular/material/theming';
-@include mat-core();
-// i got these colors as my colors i want to use: Rosu - #DC3541 Gri - #696969 Negru - #212121
-// i want to you to use these colors and create the pallete for angular material
-// i want to use the colors in the whole app
-// i want to use the colors in the whole app
-
-$primary: mat-palette($mat-red);
-$accent: mat-palette($mat-grey);
-$warn: mat-palette($mat-black);
-
+$rosu-principal: #DC3541;
+$gri-principal: #696969;
+$negru-principal: #212121;
+$text-color: #FBFFFE;
+$accent-color:#BDD9BF;
+$bej:#E6EED6;

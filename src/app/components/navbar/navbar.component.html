@@ -1,21 +1,44 @@
-<mat-toolbar>
-  <div class="toolbar-container">
-    <div class="logo" itemprop="logo">LOGO</div>
-    <nav
-      class="nav-links"
-      mat-tab-nav-bar
-      [tabPanel]="tabPanel"
-      role="navigation"
+<header class="header-class width-full">
+  <a routerLink="" class="image-header header-class">
+    <div class="logo-container">
+      <img src="../../../assets/images/scut.svg" class="image-header" />
+      <img src="../../../assets/images/text.png" class="text-image-header" />
+    </div>
+  </a>
+
+  <nav class="nav-container" *ngIf="!isMobile; else mobileNav">
+    <a
+      class="header-links"
+      *ngFor="let link of navLinks"
+      [routerLink]="link.path"
+      [class.active]="isActive(link.path)"
+      (click)="navigateTo(link.path)"
+      >{{ link.name }}</a
     >
-      <a
-        mat-tab-link
-        *ngFor="let link of links"
-        (click)="handleClick(link)"
-        [active]="activeLink == link"
+  </nav>
+
+  <ng-template #mobileNav>
+    <button mat-button class="centered" (click)="toggleNav()">
+      <mat-icon fontIcon="menu" class="icon-header-color"></mat-icon>
+    </button>
+    <aside class="container-for-nav" [class.visible]="navVisible">
+      <button
+        mat-button
+        class="icon-header-inside centered"
+        (click)="toggleNav()"
       >
-        {{ link.name }}
-      </a>
-    </nav>
-    <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
-  </div>
-</mat-toolbar>
+        <mat-icon class="icon-header-color height-full">close </mat-icon>
+      </button>
+      <nav class="mobile-nav-container">
+        <a
+          class="header-links-mobile"
+          *ngFor="let link of navLinks"
+          [routerLink]="link.path"
+          [class.active]="isActive(link.path)"
+          (click)="navigateTo(link.path)"
+          >{{ link.name }}</a
+        >
+      </nav>
+    </aside>
+  </ng-template>
+</header>
