@@ -1,40 +1,21 @@
-<!-- <mat-sidenav-container class="example-container">
-  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
-    Sidenav content
-    
-  </mat-sidenav>
-
-  <mat-sidenav-content>
-    
-    <button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button>
-  </mat-sidenav-content>
-</mat-sidenav-container>  -->
 <mat-toolbar>
-  <mat-toolbar>
-    <mat-sidenav-container class="example-conta iner">
-      <mat-sidenav #sidenav mode="side" [(opened)]="opened">
-        Sidenav content
-      </mat-sidenav>
-
-      <mat-sidenav-content>
-        <button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button>
-      </mat-sidenav-content>
-    </mat-sidenav-container>
-    <span>My App</span>
-    <span class="example-spacer"></span>
-    <button
-      mat-icon-button
-      class="example-icon favorite-icon"
-      aria-label="Example icon-button with heart icon"
+  <div class="toolbar-container">
+    <div class="logo" itemprop="logo">LOGO</div>
+    <nav
+      class="nav-links"
+      mat-tab-nav-bar
+      [tabPanel]="tabPanel"
+      role="navigation"
     >
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button
-      mat-icon-button
-      class="example-icon"
-      aria-label="Example icon-button with share icon"
-    >
-      <mat-icon>share</mat-icon>
-    </button>
-  </mat-toolbar>
+      <a
+        mat-tab-link
+        *ngFor="let link of links"
+        (click)="handleClick(link)"
+        [active]="activeLink == link"
+      >
+        {{ link.name }}
+      </a>
+    </nav>
+    <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+  </div>
 </mat-toolbar>

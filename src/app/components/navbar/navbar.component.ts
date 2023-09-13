@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { FormsModule } from '@angular/forms';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { NgIf, NgFor } from '@angular/common';
+import { Router, NavigationEnd } from '@angular/router';
+
+interface Link {
+  name: string;
+  path: string;
+}
 
 @Component({
   selector: 'app-navbar',
@@ -11,10 +12,29 @@ import { NgIf, NgFor } from '@angular/common';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  events: string[] = [];
-  opened = false;
+  links: Link[] = [
+    { name: 'ACASA', path: '' },
+    { name: 'MASINI', path: 'masini' },
+    { name: 'CONTACT', path: 'contact' },
+  ];
+  activeLink = this.links[0];
+
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.opened = false;
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        const url = event.urlAfterRedirects;
+        const link = this.links.find((l) => url.includes(l.path));
+        if (link) {
+          this.activeLink = link;
+        }
+      }
+    });
+  }
+
+  handleClick(link: Link) {
+    this.activeLink = link;
+    this.router.navigate([link.path]);
   }
 }
