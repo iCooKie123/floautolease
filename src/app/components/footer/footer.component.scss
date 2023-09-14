@@ -1,0 +1,60 @@
+@import "../../../assets/floautotheme.scss";
+.footer-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $negru-principal;
+  color: $text-color;
+}
+
+.footer-container-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.footer-container-content img {
+  height: 100px;
+  width: auto;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-container-content > * {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 2rem;
+}
+
+.display-flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h6 {
+  margin: 0;
+  padding-bottom: 1em;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.divider {
+  background-color: $rosu-principal;
+}
+
+@media (max-width: 767px) {
+  .footer-container-content {
+    flex-direction: column;
+  }
+}
