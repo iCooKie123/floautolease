@@ -15,8 +15,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { ContactComponent } from './pages/contact/contact.component';
+import { MatCardModule } from '@angular/material/card';
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomepageComponent, ContactComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    HomepageComponent,
+    ContactComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -30,6 +36,7 @@ import { ContactComponent } from './pages/contact/contact.component';
     MatToolbarModule,
     MatIconModule,
     MatTabsModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
