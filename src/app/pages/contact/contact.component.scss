@@ -1,21 +1,13 @@
-// .foreach-contact-section {
-//   // display: grid;
-//   // grid-template-columns: auto 1fr;
-//   // grid-template-rows: auto auto;
-//   // grid-template-areas: "icon title" "icon description";
-//   // align-items: center;
-// }
-
-// .contact-section-container {
-//   display: flex;
-//   justify-content: space-between;
-// }
+.contact-section-container {
+  display: flex;
+  justify-content: space-between;
+}
 body {
   padding: 5rem;
 }
 .map-container {
   width: 40vw;
-  height: 50vh;
+  height: 40vh;
 }
 .contact-card {
   width: 40vw;
@@ -25,12 +17,13 @@ body {
   margin-bottom: 2rem;
 }
 .contact-section-card {
-  width: 40%;
+  width: 40vw;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 2rem;
+  z-index: 50;
 }
 
 .card-header {
@@ -40,7 +33,14 @@ body {
   // justify-content: space-between;
 }
 
-@media only screen and (max-width: 767px) {
+.aside-content-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+@media only screen and (max-width: 900px) {
   .contact-card,
   .contact-section-card {
     width: 100%;
@@ -48,4 +48,16 @@ body {
   body {
     padding: 1rem;
   }
+  .contact-section-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .map-container {
+    width: 100%;
+    // height: 25vh;
+  }
+}
+
+mat-card {
+  z-index: -1 !important;
 }
