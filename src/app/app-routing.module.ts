@@ -3,12 +3,13 @@ import { RouterModule } from '@angular/router';
 import { Route } from '@angular/router';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { MasiniComponent } from './pages/masini/masini.component';
 
 const routes: Route[] = [
   { path: '', component: HomepageComponent },
   {
     path: 'masini',
-    component: HomepageComponent,
+    component: MasiniComponent,
   },
   {
     path: 'contact',

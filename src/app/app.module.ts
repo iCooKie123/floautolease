@@ -21,6 +21,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MasiniComponent } from './pages/masini/masini.component';
 import { CarCardComponent } from './components/car-card/car-card.component';
+import { MatChipsModule } from '@angular/material/chips';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +49,8 @@ import { CarCardComponent } from './components/car-card/car-card.component';
     MatCardModule,
     MatDividerModule,
     MatListModule,
+    MatChipsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

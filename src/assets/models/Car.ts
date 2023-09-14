@@ -1,9 +1,8 @@
-interface Car {
+export interface Car {
   anFabricatie: number;
   kilometraj: number;
   marca: string;
   model: string;
-  poza: string;
   pret: number;
   id?: number;
   currency?: string;
@@ -22,4 +21,5 @@ interface Car {
   vin: string;
   dotari: string[];
   descriere: string;
+  titlu: string;
 }
