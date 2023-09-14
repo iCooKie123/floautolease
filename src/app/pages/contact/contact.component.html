@@ -1,7 +1,10 @@
 <app-navbar></app-navbar>
+
 <body>
   <mat-card class="contact-card">
-    <mat-card-header><h1>Contact</h1></mat-card-header>
+    <mat-card-header>
+      <h1>Contact</h1>
+    </mat-card-header>
     <mat-card-content>
       Bine ați venit la pagina noastră de contact! Ne bucurăm să vă ascultăm și
       să vă răspundem la întrebări, sugestii sau orice altceva aveți în minte.
@@ -14,59 +17,43 @@
   <main>
     <address class="contact-section-container">
       <section>
-        <section
-          *ngFor="let section of contactSections"
-          class="foreach-contact-section"
-        >
+        <section *ngFor="let section of contactSections" class="foreach-contact-section">
           <mat-card class="contact-section-card">
             <mat-card-header class="card-header">
               <mat-icon fontIcon="{{ section.icon }}" mat-card-image></mat-icon>
-              <h2
-                [attr.aria-label]="section.title"
-                class="title-section"
-                role="heading"
-                aria-level="2"
-              >
+              <h2 [attr.aria-label]="section.title" class="title-section" role="heading" aria-level="2">
                 {{ section.title }}
-              </h2></mat-card-header
-            >
-            <mat-card-content
-              ><p
-                role="paragraph"
-                *ngFor="let description of section.description"
-                class="paragraph-section"
-              >
+              </h2>
+            </mat-card-header>
+            <mat-card-content>
+              <p role="paragraph" *ngFor="let description of section.description" class="paragraph-section">
                 <ng-container *ngIf="description.startsWith('mailto:')">
                   <a [href]="description" aria-label="email" role="email">{{
                     description.replace("mailto:", "")
-                  }}</a>
+                    }}</a>
                 </ng-container>
                 <ng-container *ngIf="description.startsWith('tel:')">
-                  <a
-                    [href]="description"
-                    aria-label="telephone"
-                    role="telephone"
-                    >{{ description.replace("tel:", "") }}</a
-                  >
+                  <a [href]="description" aria-label="telephone" role="telephone">{{ description.replace("tel:", "")
+                    }}</a>
                 </ng-container>
-                <ng-container
-                  *ngIf="
+                <ng-container *ngIf="
                     !description.startsWith('mailto:') &&
                     !description.startsWith('tel:')
-                  "
-                >
+                  ">
                   <p role="paragraph" aria-label="description">
                     {{ description }}
                   </p>
                 </ng-container>
-              </p></mat-card-content
-            >
+              </p>
+            </mat-card-content>
           </mat-card>
         </section>
       </section>
       <aside class="aside-content-contact">
         <mat-card>
-          <mat-card-header><h2>Showroom</h2></mat-card-header>
+          <mat-card-header>
+            <h2>Showroom</h2>
+          </mat-card-header>
           <mat-card-content class="showroom-content">
             <p>
               Puteti sa ne gasiti la adresa
@@ -78,24 +65,17 @@
         <mat-card class="map-container">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2850.8523238533417!2d26.197151476422217!3d44.39515310412857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1fd04289b3405%3A0xc199aee22beb702a!2sFLO%20AUTO%20LEASE%20SRL!5e0!3m2!1sen!2sro!4v1694644231450!5m2!1sen!2sro"
-            width="100%"
-            height="100%"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+            width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </mat-card>
       </aside>
     </address>
   </main>
 
+
   <head>
     <title>Contact Us - My Website</title>
-    <meta
-      name="description"
-      content="Contact us for any inquiries or feedback."
-    />
+    <meta name="description" content="Contact us for any inquiries or feedback." />
     <meta name="keywords" content="contact, email, phone, feedback" />
     <link rel="canonical" href="https://www.mywebsite.com/contact" />
     <meta name="robots" content="index, follow" />
@@ -103,3 +83,4 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 </body>
+<app-footer></app-footer>

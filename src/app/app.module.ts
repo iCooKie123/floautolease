@@ -19,6 +19,8 @@ import { MatCardModule } from '@angular/material/card';
 import { FooterComponent } from './components/footer/footer.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { MasiniComponent } from './pages/masini/masini.component';
+import { CarCardComponent } from './components/car-card/car-card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +28,8 @@ import { MatListModule } from '@angular/material/list';
     HomepageComponent,
     ContactComponent,
     FooterComponent,
+    MasiniComponent,
+    CarCardComponent,
   ],
   imports: [
     BrowserModule,

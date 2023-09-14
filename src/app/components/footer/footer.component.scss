@@ -1,6 +1,7 @@
 @import "../../../assets/floautotheme.scss";
+
 .footer-container {
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -24,12 +25,14 @@
   height: 100px;
   width: auto;
 }
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.footer-container-content > * {
+
+.footer-container-content>* {
   padding-left: 5rem;
   padding-right: 5rem;
   padding-top: 2rem;
@@ -51,6 +54,13 @@ h6 {
 
 .divider {
   background-color: $rosu-principal;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @media (max-width: 767px) {
