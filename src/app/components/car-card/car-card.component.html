@@ -1,12 +1,20 @@
-<!-- TODO: implement custom card because all other sucks -->
-<mat-card>
-    <mat-card-header>
-        <mat-card-title>{{car.titlu}}</mat-card-title>
-        <mat-card-subtitle>
-            <mat-chip-set>{{car.capacitateCilindrica}}⚫ {{car.putere}} CP ⚫ {{car.kilometraj}} km ⚫
-                {{car.tipCaroserie}}</mat-chip-set>
-        </mat-card-subtitle>
-    </mat-card-header>
-
-
-</mat-card>
+<div class="card-container">
+    <div class="image-carousel-container">
+        
+    </div>
+    <div class="card-content">
+        <div class="card-header">
+            <h3>{{car.titlu}}</h3>
+        </div>
+        <mat-chip-set class="chip-container">
+            <mat-chip>{{car.combustibil}}</mat-chip>
+            <mat-chip>{{car.anFabricatie}}</mat-chip>
+            <mat-chip>{{car.kilometraj}} km</mat-chip>
+            <mat-chip>{{car.putere}} CP</mat-chip>
+        </mat-chip-set>
+        <div class="card-footer">
+            <h1>{{car.pret}} €</h1>
+            <button mat-raised-button color="primary">Detalii</button>
+        </div>
+    </div>
+</div>

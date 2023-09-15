@@ -1,3 +1,5 @@
 <app-navbar></app-navbar>
-<app-car-card *ngFor="let car of cars" [car]="car"></app-car-card>
+<div class="cards-container">
+    <app-car-card *ngFor="let car of cars" [car]="car"></app-car-card>
+</div>
 <app-footer></app-footer>

@@ -1,3 +1,5 @@
+import { SafeUrl } from '@angular/platform-browser';
+
 export interface Car {
   anFabricatie: number;
   kilometraj: number;
@@ -21,5 +23,6 @@ export interface Car {
   vin: string;
   dotari: string[];
   descriere: string;
+  imagine: SafeUrl;
   titlu: string;
 }
