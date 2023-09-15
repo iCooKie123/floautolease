@@ -25,6 +25,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselModule } from '@marcreichel/angular-carousel';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { TestpageComponent } from './pages/testpage/testpage.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     MasiniComponent,
     CarCardComponent,
     CarouselComponent,
+    TestpageComponent,
   ],
   imports: [
     BrowserModule,
