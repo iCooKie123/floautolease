@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
 import { Car } from 'src/assets/models/Car';
 
 @Component({

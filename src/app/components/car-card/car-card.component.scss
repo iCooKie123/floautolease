@@ -6,58 +6,32 @@
     background-color: $white-background;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-.image-carousel-item {
-    flex: 1 0 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.image-carousel-item img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-}
-
-.card-content {
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-    width: 100%;
-}
-
-.card-header {
-    margin-bottom: 16px;
+    padding: 1rem;
+    width: calc(100% - 1rem);
 }
 
 .chip-container {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 16px;
+    justify-content: space-between;
+    padding: 1rem;
 }
 
-.mat-chip {
-    margin-right: 8px;
-    margin-bottom: 8px;
+.pret-redus p {
+    color: red;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
 }
 
 .card-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: auto;
-    padding: 16px;
-    background-color: #f5f5f5;
+    padding: 1rem;
 }
 
-.card-footer h1 {
-    font-size: 32px;
-    margin: 0;
-}
-
-.card-footer button {
-    margin-left: auto;
+.detalii-btn {
+    background-color: $rosu-principal;
 }
