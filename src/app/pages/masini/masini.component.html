@@ -1,5 +1,81 @@
 <app-navbar></app-navbar>
-<div class="navigation-mock" style="width: 100%; height: 10%; background-color:red;"></div>
+<section role="filter" class="filter-nav-panel">
+    <mat-form-field class="sort-item">
+        <mat-label>
+            <mat-icon fontIcon="sort_by_alpha"></mat-icon>
+            Sorteaza dupa
+        </mat-label>
+        <mat-select [(ngModel)]="selectedSortOption" (selectionChange)="sortCarsBy(selectedSortOption)">
+            <mat-option *ngFor="let option of sortOptions" [value]="option">
+                {{option.label}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-expansion-panel class="filter-panel" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <mat-icon fontIcon="filter_list"></mat-icon>
+                Filtre
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-form-field>
+            <mat-label>
+                Brand
+            </mat-label>
+            <mat-select>
+                <mat-option>none</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>
+                Model
+            </mat-label>
+            <mat-select>
+                <mat-option>none</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>
+                Caroserie
+            </mat-label>
+            <mat-select>
+                <mat-option>none</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>
+                Combustibil
+            </mat-label>
+            <mat-select>
+                <mat-option>none</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>
+                Kilometraj
+            </mat-label>
+            <mat-select>
+                <mat-option>none</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>
+                Pret
+            </mat-label>
+            <mat-select>
+                <mat-option>none</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>
+                An fabricatie
+            </mat-label>
+            <mat-select>
+                <mat-option>none</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </mat-expansion-panel>
+</section>
 <div class="cards-container">
     <section class="cards" *ngFor="let car of cars">
         <app-car-card [car]="car"></app-car-card>

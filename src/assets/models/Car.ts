@@ -25,4 +25,5 @@ export interface Car {
   descriere: string;
   imagine: SafeUrl;
   titlu: string;
+  dataAdaugare: Date;
 }
