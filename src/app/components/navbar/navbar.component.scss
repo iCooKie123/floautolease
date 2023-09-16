@@ -124,3 +124,21 @@
 .icon-header-color {
   color: $text-color;
 }
+
+.header-links::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: $rosu-principal;
+  transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
+}
+
+.header-links:hover::after,
+.header-links.active::after,
+.header-links:focus::after {
+  left: 0;
+  width: 100%;
+}

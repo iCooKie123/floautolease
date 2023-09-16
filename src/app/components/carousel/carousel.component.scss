@@ -1,3 +1,5 @@
+@import "../../../assets/floautotheme.scss";
+
 [class^="image-carousel"],
 [class*=" image-carousel"] {
     background: grey;
@@ -35,7 +37,7 @@
 }
 
 .dot.active {
-    background: #000;
+    background: $rosu-principal;
 }
 
 .arrow {
