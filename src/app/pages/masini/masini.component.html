@@ -1,6 +1,9 @@
 <app-navbar></app-navbar>
-<div class="navigation-mock" style="width: 80%; height: 10%; background-color:red;"></div>
+<div class="navigation-mock" style="width: 100%; height: 10%; background-color:red;"></div>
 <div class="cards-container">
-    <app-car-card class="cards" *ngFor="let car of cars" [car]="car"></app-car-card>
+    <section class="cards" *ngFor="let car of cars">
+        <app-car-card [car]="car"></app-car-card>
+    </section>
+    <!-- <app-car-card class="cards" *ngFor="let car of cars" [car]="car"></app-car-card> -->
 </div>
 <app-footer></app-footer>

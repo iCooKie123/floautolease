@@ -3,5 +3,22 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 16px;
-    
+    padding: 0 1rem;
+    background-color: pink;
+}
+
+.cards {
+    width: calc(33% - 1rem);
+}
+
+@media screen and (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+    .cards {
+        width: calc(100% - 1rem);
+    }
 }
