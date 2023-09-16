@@ -23,7 +23,6 @@ import { MasiniComponent } from './pages/masini/masini.component';
 import { CarCardComponent } from './components/car-card/car-card.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { HttpClientModule } from '@angular/common/http';
-import { CarouselModule } from '@marcreichel/angular-carousel';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { TestpageComponent } from './pages/testpage/testpage.component';
 @NgModule({
@@ -56,7 +55,6 @@ import { TestpageComponent } from './pages/testpage/testpage.component';
     MatListModule,
     MatChipsModule,
     HttpClientModule,
-    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
