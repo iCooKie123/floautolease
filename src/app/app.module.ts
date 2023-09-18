@@ -28,8 +28,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { NgOptimizedImage } from '@angular/common';
-import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,9 +63,8 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
     MatSelectModule,
     MatSlideToggleModule,
     MatExpansionModule,
-    NgOptimizedImage,
   ],
-  providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy }],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
