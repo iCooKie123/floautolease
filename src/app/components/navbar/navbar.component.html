@@ -1,8 +1,8 @@
-<header class="header-class width-full">
+<header class="header-class">
   <a routerLink="" class="image-header header-class">
     <div class="logo-container">
-      <img title="FLO AUTO LEASE logo text" src="assets/images/text.png" class="text-image-header" />
       <img title="FLO AUTO LEASE logo image" src="assets/images/scut.svg" class="image-header" />
+      <img title="FLO AUTO LEASE logo text" src="assets/images/text.png" class="text-image-header" />
     </div>
   </a>
 
@@ -26,3 +26,7 @@
     </aside>
   </ng-template>
 </header>
+
+<div class="overlay" *ngIf="navVisible" (click)="toggleNav()">
+
+</div>

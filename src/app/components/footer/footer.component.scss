@@ -67,4 +67,8 @@ h6 {
   .footer-container-content {
     flex-direction: column;
   }
+
+  .footer-container {
+    width: calc(100vw);
+  }
 }
