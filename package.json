@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "github": "ng build --configuration production --base-href='https://icookie123.github.io/floautolease/masini'"
   },
   "private": true,
   "dependencies": {

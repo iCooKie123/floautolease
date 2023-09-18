@@ -7,7 +7,7 @@ import { Car } from 'src/assets/models/Car';
   providedIn: 'root',
 })
 export class CarService {
-  private carsUrl = '../../assets/mock_cars.json';
+  private carsUrl = 'assets/mock_cars.json';
 
   constructor(private http: HttpClient) {}
 
