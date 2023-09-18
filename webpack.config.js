@@ -6,6 +6,7 @@ module.exports = {
   plugins: [
     new PurgeCSSPlugin({
       paths: glob.sync(path.join(__dirname, "src/**/*"), { nodir: true }),
+      safelist: [/^mat-/, /^fa-/, /^bx/, /^swiper-/],
     }),
   ],
 };
