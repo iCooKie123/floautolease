@@ -4,7 +4,7 @@
     justify-content: space-between;
     margin-top: 16px;
     padding: 0 1rem;
-    background-color: pink;
+    // background-color: pink;
     // width: 100%;
 }
 
@@ -19,22 +19,17 @@
     margin-bottom: 1rem;
     margin-top: 1rem;
     padding: 0 1rem;
-    background-color: magenta;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    // justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: nowrap;
     flex-direction: row;
+    gap: 2rem
 }
 
 .sort-item {
     width: 20%;
-    background-color: red;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
+
 }
 
 .filter-container .sort-item .sort-item__label {
@@ -48,6 +43,36 @@
     width: 70%;
 }
 
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+
+
+.filter-panel {
+    width: 20%;
+    transition: width 0.3s ease-in-out;
+}
+
+.opened {
+    width: 75%;
+    transition: width 0.3s ease-in-out;
+}
+
+.filter-panel-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 2rem;
+}
+
+
 @media screen and (max-width: 768px) {
     .cards-container {
         flex-direction: column;
@@ -57,5 +82,14 @@
 
     .cards {
         width: calc(100% - 2rem);
+    }
+
+    .filter-panel-container {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .filter-item {
+        width: 40%;
     }
 }

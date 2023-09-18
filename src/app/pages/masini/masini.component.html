@@ -1,6 +1,73 @@
 <app-navbar></app-navbar>
 <section role="filter" class="filter-nav-panel">
-    <mat-form-field class="sort-item">
+    <mat-expansion-panel class="filter-panel {{panelOpenState ? 'opened':''}}" id="filter-panel"
+        (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <mat-icon fontIcon="filter_list"></mat-icon>
+                Filtre
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="filter-panel-container">
+            <mat-form-field class="filter-item">
+                <mat-label>
+                    Brand
+                </mat-label>
+                <mat-select>
+                    <mat-option>none</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="filter-item">
+                <mat-label>
+                    Model
+                </mat-label>
+                <mat-select>
+                    <mat-option>none</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="filter-item">
+                <mat-label>
+                    Caroserie
+                </mat-label>
+                <mat-select>
+                    <mat-option>none</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="">
+                <mat-label>
+                    Combustibil
+                </mat-label>
+                <mat-select>
+                    <mat-option>none</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="">
+                <mat-label>
+                    Kilometraj
+                </mat-label>
+                <mat-select>
+                    <mat-option>none</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="filter-item">
+                <mat-label>
+                    Pret
+                </mat-label>
+                <mat-select>
+                    <mat-option>none</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="filter-item">
+                <mat-label>
+                    An fabricatie
+                </mat-label>
+                <mat-select>
+                    <mat-option>none</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </mat-expansion-panel>
+    <!-- <mat-form-field class="sort-item">
         <mat-label>
             <mat-icon fontIcon="sort_by_alpha"></mat-icon>
             Sorteaza dupa
@@ -10,70 +77,19 @@
                 {{option.label}}
             </mat-option>
         </mat-select>
-    </mat-form-field>
-    <mat-expansion-panel class="filter-panel" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    </mat-form-field> -->
+    <mat-expansion-panel class="sort-item">
         <mat-expansion-panel-header>
             <mat-panel-title>
-                <mat-icon fontIcon="filter_list"></mat-icon>
-                Filtre
+                <mat-icon fontIcon="sort_by_alpha" style="margin-right: 1rem;"></mat-icon>
+                Sortati dupa
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <mat-form-field>
-            <mat-label>
-                Brand
-            </mat-label>
-            <mat-select>
-                <mat-option>none</mat-option>
-            </mat-select>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>
-                Model
-            </mat-label>
-            <mat-select>
-                <mat-option>none</mat-option>
-            </mat-select>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>
-                Caroserie
-            </mat-label>
-            <mat-select>
-                <mat-option>none</mat-option>
-            </mat-select>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>
-                Combustibil
-            </mat-label>
-            <mat-select>
-                <mat-option>none</mat-option>
-            </mat-select>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>
-                Kilometraj
-            </mat-label>
-            <mat-select>
-                <mat-option>none</mat-option>
-            </mat-select>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>
-                Pret
-            </mat-label>
-            <mat-select>
-                <mat-option>none</mat-option>
-            </mat-select>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>
-                An fabricatie
-            </mat-label>
-            <mat-select>
-                <mat-option>none</mat-option>
-            </mat-select>
-        </mat-form-field>
+        <mat-radio-group class="radio-group" [(ngModel)]="selectedSortOption" (change)="sortCarsBy(selectedSortOption)">
+            <mat-radio-button *ngFor="let option of sortOptions" [value]="option">
+                {{option.label}}
+            </mat-radio-button>
+        </mat-radio-group>
     </mat-expansion-panel>
 </section>
 <div class="cards-container">
