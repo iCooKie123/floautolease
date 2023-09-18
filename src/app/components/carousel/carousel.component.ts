@@ -24,7 +24,7 @@ export class CarouselComponent implements OnInit, AfterViewInit, OnDestroy {
   details: TrackDetails | undefined;
   opacities: number[] = [];
   slides = [
-    'assets/4kimg/car_gray_wet_147750_3840x2160.jpg',
+    '../../../assets/4kimg/car_gray_wet_147750_3840x2160.jpg',
     'assets/4kimg/car_sports_car_neon_157154_3840x2160.jpg',
     'assets/4kimg/sports_car_drift_race_131217_3840x2160.jpg',
   ];
