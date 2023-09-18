@@ -2,7 +2,7 @@
     <div class="keen-slider keen-slider--vertical" #sliderRef>
         <div class="keen-slider__slide image-carousel" *ngFor="let slide of slides; let idx = index"
             [ngStyle]="{ opacity: opacities[idx] }">
-            <img class="image-in-carousel" ngSrc="{{slide}}" [alt]="slide" [ngStyle]="scaleStyle(idx)">
+            <img class="image-in-carousel" [ngSrc]="slide" [alt]="slide" [ngStyle]="scaleStyle(idx)">
         </div>
     </div>
     <svg *ngIf="slider" [ngClass]="
