@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CarService } from 'src/app/services/car.service';
-import { Car } from 'src/assets/models/Car';
+import { Car } from 'src/app/models/Car';
 
 interface SortOption {
   value: keyof Car;

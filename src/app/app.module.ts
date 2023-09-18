@@ -24,10 +24,12 @@ import { MatChipsModule } from '@angular/material/chips';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { TestpageComponent } from './pages/testpage/testpage.component';
-import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { NgOptimizedImage } from '@angular/common';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,8 +64,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatSelectModule,
     MatSlideToggleModule,
     MatExpansionModule,
+    NgOptimizedImage,
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

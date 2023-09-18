@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Car } from 'src/assets/models/Car';
+import { Car } from 'src/app/models/Car';
 
 @Component({
   selector: 'app-car-card',
@@ -10,6 +10,4 @@ export class CarCardComponent {
   @Input() car: Car = {} as Car;
 
   constructor() {}
-
-  
 }
