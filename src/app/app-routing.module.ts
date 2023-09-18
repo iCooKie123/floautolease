@@ -19,7 +19,7 @@ const routes: Route[] = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{useHash:true})], //! useHash:true is for github pages
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
