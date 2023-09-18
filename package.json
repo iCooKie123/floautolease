@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "github": "ng build --configuration production --base-href=https://icookie123.github.io/floautolease/",
-    "local": "ng build --configuration production --base-href=/ --output-path=dist"
+    "local": "ng build --configuration production --output-path=dist --base-href="
   },
   "private": true,
   "dependencies": {
