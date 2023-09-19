@@ -1,4 +1,23 @@
 <app-navbar></app-navbar>
 
+<div class="background-wrapper">
+    <div class="centered-content">
+        <h2>SERIOZITATE | TRANSPARENTA | PREMIUM</h2>
+        <div class="button-wrapper">
+            <button mat-raised-button class="stoc-button">
+                <div class="inside-button-wrapper">
+                    <h3>MASINI IN STOC</h3>
+                    <mat-icon class="visible-icon" fontIcon="arrow_forward_ios"></mat-icon>
+                </div>
+            </button>
+            <button mat-raised-button class="servicii-button">
+                <div class="inside-button-wrapper">
+                    <h3>SERVICII</h3>
+                    <mat-icon class="visible-icon" fontIcon="arrow_forward_ios"></mat-icon>
+                </div>
+            </button>
+        </div>
+    </div>
+    <app-slideshow [images]="imgArray"></app-slideshow>
+</div>
 <app-footer></app-footer>
-<router-outlet></router-outlet>

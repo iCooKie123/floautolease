@@ -7,7 +7,7 @@ import { MasiniComponent } from './pages/masini/masini.component';
 import { TestpageComponent } from './pages/testpage/testpage.component';
 
 const routes: Route[] = [
-  { path: '', component: TestpageComponent },
+  { path: '', component: HomepageComponent },
   {
     path: 'masini',
     component: MasiniComponent,
@@ -19,7 +19,7 @@ const routes: Route[] = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{useHash:true})], //! useHash:true is for github pages
+  imports: [RouterModule.forRoot(routes, { useHash: true })], //! useHash:true is for github pages
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

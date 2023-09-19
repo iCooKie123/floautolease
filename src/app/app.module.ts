@@ -30,6 +30,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { SlideshowComponent } from './components/slideshow/slideshow.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +42,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     CarCardComponent,
     CarouselComponent,
     TestpageComponent,
+    SlideshowComponent,
   ],
   imports: [
     BrowserModule,
