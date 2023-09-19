@@ -31,6 +31,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { SlideshowComponent } from './components/slideshow/slideshow.component';
+import { InfoCardComponent } from './components/info-card/info-card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +44,7 @@ import { SlideshowComponent } from './components/slideshow/slideshow.component';
     CarouselComponent,
     TestpageComponent,
     SlideshowComponent,
+    InfoCardComponent,
   ],
   imports: [
     BrowserModule,

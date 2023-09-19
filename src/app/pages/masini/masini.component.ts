@@ -61,8 +61,8 @@ export class MasiniComponent implements OnInit {
     { value: 'putere', label: 'Putere', filterValue: '' },
   ];
   selectedFilterOption: FilterOption = this.filterOptions[0];
-  panelOpenState: boolean = false;
-
+  filterPanelOpenState: boolean = false;
+  sortPanelOpenState: boolean = false;
   ngOnInit(): void {
     this.carService.getCars().subscribe((cars) => {
       this.cars = cars;

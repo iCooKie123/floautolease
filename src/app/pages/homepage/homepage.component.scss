@@ -3,7 +3,7 @@
 .background-wrapper {
     position: relative;
     width: 100%;
-    height: 75%;
+    aspect-ratio: 21/9;
     overflow: hidden;
 
     &::before {
@@ -26,11 +26,14 @@
     z-index: 2;
     text-align: center;
     width: 40vw;
-    // height: 30%;
     aspect-ratio: 25/6;
     backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .centered-content h2 {
@@ -44,19 +47,20 @@
 }
 
 .stoc-button {
-    width: 15vw;
-    height: 3vw;
+    // width: 15vw;
+    height: 2.5vw;
     border-radius: 2vw;
 }
 
 .servicii-button {
     // width: 15vw;
-    height: 3vw;
+    height: 2.5vw;
     border-radius: 2vw;
 }
 
 h3 {
     font-size: 1vw;
+    color: $text-color;
 }
 
 mat-icon,
@@ -72,6 +76,10 @@ mat-icon,
     justify-content: center;
     gap: 2rem;
     padding: 1rem;
+}
+
+.servicii-button h3 {
+    color: $negru-principal;
 }
 
 .inside-button-wrapper {

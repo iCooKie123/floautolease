@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <section role="filter" class="filter-nav-panel">
-    <mat-expansion-panel class="filter-panel {{panelOpenState ? 'opened':''}}" id="filter-panel"
-        (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel class="filter-panel {{filterPanelOpenState ? 'opened':''}}" id="filter-panel"
+        (opened)="filterPanelOpenState = true" (closed)="filterPanelOpenState = false">
         <mat-expansion-panel-header>
             <mat-panel-title>
                 <mat-icon fontIcon="filter_list"></mat-icon>
@@ -33,7 +33,7 @@
                     <mat-option>none</mat-option>
                 </mat-select>
             </mat-form-field>
-            <mat-form-field class="">
+            <mat-form-field class="filter-item">
                 <mat-label>
                     Combustibil
                 </mat-label>
@@ -41,7 +41,7 @@
                     <mat-option>none</mat-option>
                 </mat-select>
             </mat-form-field>
-            <mat-form-field class="">
+            <mat-form-field class="filter-item">
                 <mat-label>
                     Kilometraj
                 </mat-label>
@@ -67,18 +67,8 @@
             </mat-form-field>
         </div>
     </mat-expansion-panel>
-    <!-- <mat-form-field class="sort-item">
-        <mat-label>
-            <mat-icon fontIcon="sort_by_alpha"></mat-icon>
-            Sorteaza dupa
-        </mat-label>
-        <mat-select [(ngModel)]="selectedSortOption" (selectionChange)="sortCarsBy(selectedSortOption)">
-            <mat-option *ngFor="let option of sortOptions" [value]="option">
-                {{option.label}}
-            </mat-option>
-        </mat-select>
-    </mat-form-field> -->
-    <mat-expansion-panel class="sort-item">
+    <mat-expansion-panel class="sort-item {{sortPanelOpenState ? 'opened':''}}" (opened)="sortPanelOpenState = true"
+        (closed)="sortPanelOpenState = false">
         <mat-expansion-panel-header>
             <mat-panel-title>
                 <mat-icon fontIcon="sort_by_alpha" style="margin-right: 1rem;"></mat-icon>

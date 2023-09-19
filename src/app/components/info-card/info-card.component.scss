@@ -1,0 +1,16 @@
+@import "../../../assets/floautotheme.scss";
+
+.card-wrapper {
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: $white-background;
+
+    p {
+        text-indent: 2rem;
+    }
+}
+
+.mat-mdc-card.card-wrapper {
+    background-color: $white-background;
+}
