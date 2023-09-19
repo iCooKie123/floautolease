@@ -7,9 +7,9 @@ import { environment } from 'src/environments/environment';
 })
 export class HomepageComponent {
   imgArray: string[] = [
-    `${environment.imagePath}/background/1.jpeg`,
-    `${environment.imagePath}/background/2.jpeg`,
-    `${environment.imagePath}/background/3.jpeg`,
+    `${environment.imagePath}/background/1.webp`,
+    `${environment.imagePath}/background/2.webp`,
+    `${environment.imagePath}/background/3.webp`,
   ];
 
   descriere: string = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus numquam nihil aperiam enim, assumenda praesentium
