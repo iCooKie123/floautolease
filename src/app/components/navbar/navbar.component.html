@@ -24,9 +24,7 @@
           [class.active]="isActive(link.path)" (click)="navigateTo(link.path)">{{ link.name }}</a>
       </nav>
     </aside>
+    <div class="overlay" *ngIf="navVisible" (click)="toggleNav()">
+    </div>
   </ng-template>
 </header>
-
-<div class="overlay" *ngIf="navVisible" (click)="toggleNav()">
-
-</div>

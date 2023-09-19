@@ -157,3 +157,14 @@
   z-index: 9999998;
   backdrop-filter: blur(5px);
 }
+
+// when the screen is bigger than 1000px 
+@media screen and (min-width: 1000px) {
+  .container-for-nav {
+    display: none;
+  }
+
+  .overlay {
+    display: none;
+  }
+}
