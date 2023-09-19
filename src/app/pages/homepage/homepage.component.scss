@@ -90,3 +90,32 @@ mat-icon,
     align-items: center;
     gap: .75vw;
 }
+
+@media screen and (max-width:768px) {
+    .background-wrapper {
+        aspect-ratio: 13.5/9;
+    }
+
+    .centered-content {
+        width: 85vw;
+        aspect-ratio: 25/6;
+        backdrop-filter: blur(2px);
+    }
+
+    h3 {
+        font-size: 4vw;
+        color: $text-color;
+        font-weight: 555;
+    }
+
+    .stoc-button h3,
+    .servicii-button h3 {
+        font-size: 2.5vw;
+    }
+
+    .stoc-button,
+    .servicii-button {
+        height: 6vw;
+        border-radius: 3vw;
+    }
+}
