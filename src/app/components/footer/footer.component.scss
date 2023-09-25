@@ -33,9 +33,9 @@ ul {
 }
 
 .footer-container-content>* {
-  padding-left: 5rem;
-  padding-right: 5rem;
-  padding-top: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 2rem;
 }
 
 .display-flex-column {
@@ -52,6 +52,20 @@ h6 {
   font-size: 2rem;
 }
 
+a {
+  all: unset;
+}
+
+li>a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+
+  &:hover {
+    color: $rosu-principal;
+  }
+}
+
 .divider {
   background-color: $rosu-principal;
 }
@@ -61,6 +75,13 @@ h6 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.link-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
 }
 
 @media (max-width: 767px) {
