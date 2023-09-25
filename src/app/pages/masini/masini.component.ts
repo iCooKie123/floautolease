@@ -87,6 +87,10 @@ export class MasiniComponent implements OnInit {
       return direction === 'desc' ? comparison * -1 : comparison;
     });
   }
+  handleExpand() {
+    this.filterPanelOpenState = true;
+    this.sortPanelOpenState = false;
+  }
 
   filterCarsBy(option: FilterOption): void {
     const { value, filterValue } = option;

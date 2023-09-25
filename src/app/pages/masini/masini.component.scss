@@ -28,7 +28,7 @@
 
 .sort-item {
     width: 20%;
-    transition: width 0.3s ease-in-out;
+    transition: width 225ms ease-in-out;
 }
 
 .filter-container .sort-item .sort-item__label {
@@ -57,6 +57,11 @@
 
 .opened {
     width: 75%;
+    transition: width 0.3s ease-in-out;
+}
+
+.openedSort {
+    width: 20%;
     transition: width 0.3s ease-in-out;
 }
 
@@ -95,13 +100,16 @@
 
     .filter-panel {
         width: 50%;
+        transition: width 225ms ease-in-out;
     }
 
     .sort-item {
         width: 50%;
+        transition: width 225ms ease-in-out;
     }
 
-    .opened {
+    .opened,
+    .openedSort {
         width: 100%;
         transition: width 0.3s ease-in-out;
     }

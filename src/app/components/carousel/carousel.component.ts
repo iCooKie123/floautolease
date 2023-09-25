@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import KeenSlider, { KeenSliderInstance, TrackDetails } from 'keen-slider';
 import { environment } from 'src/environments/environment';
+import { carsData } from '../../models/bmx X5';
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
@@ -22,11 +23,7 @@ export class CarouselComponent implements OnInit, AfterViewInit, OnDestroy {
   slider: KeenSliderInstance | undefined = undefined;
   details: TrackDetails | undefined;
   opacities: number[] = [];
-  slides = [
-    `${environment.imagePath}/4kimg/car_gray_wet_147750_3840x2160.jpg`,
-    `${environment.imagePath}/4kimg/car_sports_car_neon_157154_3840x2160.jpg`,
-    `${environment.imagePath}/4kimg/sports_car_drift_race_131217_3840x2160.jpg`,
-  ];
+  slides: string[] = [...carsData.imgArray];
 
   scaleStyle(idx: number) {
     if (!this.details) return {};

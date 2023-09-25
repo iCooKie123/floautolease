@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { carsData } from 'src/app/models/bmx X5';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -7,9 +8,9 @@ import { environment } from 'src/environments/environment';
 })
 export class HomepageComponent {
   imgArray: string[] = [
-    `${environment.imagePath}/background/1.webp`,
-    `${environment.imagePath}/background/2.webp`,
-    `${environment.imagePath}/background/3.webp`,
+    carsData.imgArray[0],
+    carsData.imgArray[1],
+    carsData.imgArray[2],
   ];
 
   descriere: string = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus numquam nihil aperiam enim, assumenda praesentium
