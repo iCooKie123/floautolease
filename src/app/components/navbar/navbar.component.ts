@@ -14,6 +14,7 @@ interface Link {
 export class NavbarComponent implements OnInit {
   navLinks: Link[] = [
     { name: 'ACASA', path: '' },
+    { name: 'SERVICII', path: 'servicii' },
     { name: 'MASINI', path: 'masini' },
     { name: 'CONTACT', path: 'contact' },
   ];

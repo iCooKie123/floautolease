@@ -5,6 +5,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { MasiniComponent } from './pages/masini/masini.component';
 import { TestpageComponent } from './pages/testpage/testpage.component';
+import { ServiciiComponent } from './pages/servicii/servicii.component';
 
 const routes: Route[] = [
   { path: '', component: HomepageComponent },
@@ -15,6 +16,10 @@ const routes: Route[] = [
   {
     path: 'contact',
     component: ContactComponent,
+  },
+  {
+    path: 'servicii',
+    component: ServiciiComponent,
   },
 ];
 

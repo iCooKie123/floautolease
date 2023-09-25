@@ -32,6 +32,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { SlideshowComponent } from './components/slideshow/slideshow.component';
 import { InfoCardComponent } from './components/info-card/info-card.component';
+import { ServiciiComponent } from './pages/servicii/servicii.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +46,7 @@ import { InfoCardComponent } from './components/info-card/info-card.component';
     TestpageComponent,
     SlideshowComponent,
     InfoCardComponent,
+    ServiciiComponent,
   ],
   imports: [
     BrowserModule,

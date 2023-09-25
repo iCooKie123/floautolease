@@ -1,0 +1,20 @@
+.cards-container-serv {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+}
+
+.icon-class {
+    font-size: 2rem;
+    height: 100%;
+    margin: 0 !important;
+    text-align: center;
+
+}
