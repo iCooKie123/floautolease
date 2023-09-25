@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import { carsData } from 'src/app/models/bmx X5';
 @Component({
   selector: 'app-homepage',
